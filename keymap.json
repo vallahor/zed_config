@@ -586,7 +586,11 @@
     "bindings": {
       "ctrl-=": "vim::ResetPaneSizes",
       "|": "pane::SplitVertical",
-      "-": "pane::SplitHorizontal"
+      "-": "pane::SplitHorizontal",
+      "space h": ["workspace::SwapPaneInDirection", "Left"],
+      "space l": ["workspace::SwapPaneInDirection", "Right"],
+      "space k": ["workspace::SwapPaneInDirection", "Up"],
+      "space j": ["workspace::SwapPaneInDirection", "Down"]
       //     // window related commands (ctrl-w X)
       //     "ctrl-w": null,
       //     "ctrl-w left": ["workspace::ActivatePaneInDirection", "Left"],
@@ -640,7 +644,7 @@
       //     "ctrl-w ctrl-n": "workspace::NewFileSplitHorizontal"
     }
   },
-  //
+
   {
     "context": "EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
     "use_layout_keys": true,
@@ -700,6 +704,20 @@
       "ctrl-;": "terminal_panel::ToggleFocus",
       "ctrl-/": "workspace::ToggleBottomDock",
       "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "shift-c": ["workspace::SendKeystrokes", "\" _ shift-c"],
+      // "d": ["workspace::SendKeystrokes", "\" _ d"],
+      // "shift-d": ["workspace::SendKeystrokes", "\" _ shift-d"],
+      "s": ["workspace::SendKeystrokes", "\" _ s"],
+      "shift-s": ["workspace::SendKeystrokes", "\" _ shift-s"],
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "shift-x": ["workspace::SendKeystrokes", "\" _ shift-x"]
     }
   }
 ]
