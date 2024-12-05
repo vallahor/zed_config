@@ -25,7 +25,7 @@
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
-    "highlight_on_yank_duration": 300
+    "highlight_on_yank_duration": 300 // not working because it's use `editor.document_highlight.read_background` and it's blank
   },
   // "ui_font_size": 16,
   "relative_line_numbers": true,
@@ -59,14 +59,15 @@
   "cursor_shape": "block",
   "theme": "vallahor",
   "languages": {
-    "python": {
-      "language_servers": ["pyright", "!pylsp", "..."]
+    "Python": {
+      "language_servers": ["!pylsp", "pyright", "..."],
+      "formatter": null
+    },
+    "JavaScript": {
+      "formatter": null
     },
     "PHP": {
       "language_servers": ["intelephense", "!phpactor", "..."]
-    },
-    "vue": {
-      "language_servers": ["volar", "!vue-language-server", "..."]
     }
   },
   "preview_tabs": {
@@ -120,5 +121,17 @@
     "runnables": false,
     "folds": false,
     "code_actions": false
+  },
+  "lsp": {
+    "pyright": {
+      "analysis": {
+        "typeCheckingMode": "off"
+      },
+      "python": {
+        "analysis": {
+          "typeCheckingMode": "off"
+        }
+      }
+    }
   }
 }
