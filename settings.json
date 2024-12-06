@@ -28,26 +28,25 @@
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
-    "highlight_on_yank_duration": 300 // not working because it's use `editor.document_highlight.read_background` and it's blank
+    "highlight_on_yank_duration": 300
   },
-  // "ui_font_size": 16,
+  "ui_font_size": 16,
   "relative_line_numbers": true,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_family": "JetBrains Mono",
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_weight": 100
+    "font_family": "JetBrains Mono",
+    "font_weight": 200
   },
   "buffer_font_size": 15,
   "buffer_font_features": {
     "liga": true
   },
-  "buffer_font_weight": 100,
-  "ui_font_weight": 100,
-  "buffer_line_height": "comfortable",
-  // "buffer_line_height": {
-  //   "custom": 2
-  // },
+  "buffer_font_weight": 200,
+  "ui_font_weight": 200,
+  "buffer_line_height": {
+    "custom": 1.7
+  },
   "indent_guides": {
     "enabled": false
   },
@@ -63,10 +62,24 @@
   "theme": "vallahor",
   "languages": {
     "Python": {
-      "language_servers": ["!pylsp", "pyright", "..."],
-      "formatter": null
+      "language_servers": ["!pylsp", "pyright", "..."]
+      // "formatter": null
     },
+    // "JavaScript": {
+    // "formatter": null,
+    // "format_on_save": "off"
+    // },
     "PHP": {
+      "format_on_save": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+      "formatter": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
       "language_servers": ["intelephense", "!phpactor", "..."]
     }
   },
@@ -80,7 +93,6 @@
     }
   },
   "files_icons": true,
-  "unnecessary_code_fade": 0,
   "restore_on_startup": "last_session",
   "show_whitespaces": "none",
   "tab_bar": {
@@ -124,14 +136,42 @@
   },
   "lsp": {
     "pyright": {
-      "analysis": {
-        "typeCheckingMode": "off"
-      },
-      "python": {
-        "analysis": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
           "typeCheckingMode": "off"
+        }
+      }
+    },
+    "intelephense": {
+      "settings": {
+        // "environment": {
+        //   "includePaths": ["/path/to/lib"]
+        // },
+        // "stubs": [
+        //   "wordpress",
+        //   "woocommerce",
+        //   "acf-pro",
+        //   "wordpress-globals",
+        //   "wp-cli"
+        // ],
+        "files": {
+          "maxSize": 5000000,
+          "excluded": ["**/node_modules/**", "**/vendor/**"]
         }
       }
     }
   }
+  // "phpactor": {
+  // "binary": {
+  //   "path": "C:\\apps\\phpactor\\phpactor.phar",
+  //   "arguments": ["language-server"]
+  // }
+  // }
+  // "emmet-language-server": {
+  //   "binary": {
+  //     "path": "C:\\Users\\Vallahor\\AppData\\Local\\Zed\\extensions\\work\\emmet\\node_modules\\.bin\\emmet-language-server"
+  //   }
+  // }
+  // }
 }

@@ -12,7 +12,6 @@
       "shift-m": "editor::SelectSmallerSyntaxNode", // Shrink Selection
       "home": "pane::ActivatePrevItem",
       "end": "pane::ActivateNextItem",
-      "ctrl-f": "file_finder::Toggle",
       "ctrl-b": "project_panel::ToggleFocus",
       "ctrl-t": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
@@ -32,7 +31,7 @@
       "down": "vim::Down",
       // "ctrl-j": "vim::Down",
       "enter": "vim::NextLineStart",
-      "ctrl-m": "vim::NextLineStart",
+      // "ctrl-m": "vim::NextLineStart",
       "+": "vim::NextLineStart",
       "-": "vim::PreviousLineStart",
 
@@ -690,8 +689,14 @@
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-t": "project_panel::ToggleFocus",
-      "ctrl-;": "terminal_panel::ToggleFocus"
+      "left": ["workspace::ActivatePaneInDirection", "Left"]
+    }
+  },
+  {
+    "context": "Editor && showing_completions && vim_mode == insert",
+    "bindings": {
+      "enter": "editor::Newline",
+      "tab": "editor::ComposeCompletion"
     }
   }
 ]
