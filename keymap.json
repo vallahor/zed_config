@@ -663,16 +663,6 @@
   },
 
   {
-    "context": "Terminal",
-    "bindings": {
-      "escape": "terminal::ToggleViMode",
-      "ctrl-;": "terminal_panel::ToggleFocus",
-      "ctrl-/": "workspace::ToggleBottomDock",
-      "ctrl-w": "pane::CloseActiveItem"
-    }
-  },
-
-  {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
       "c": ["workspace::SendKeystrokes", "\" _ c"],
@@ -689,7 +679,9 @@
   {
     "context": "Pane",
     "bindings": {
-      "left": ["workspace::ActivatePaneInDirection", "Left"]
+      // "left": ["workspace::ActivatePaneInDirection", "Left"]
+      "ctrl-b": "project_panel::ToggleFocus",
+      "ctrl-t": "workspace::ToggleLeftDock"
     }
   },
   {
@@ -697,6 +689,16 @@
     "bindings": {
       "enter": "editor::Newline",
       "tab": "editor::ComposeCompletion"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": "terminal::ToggleViMode",
+      "ctrl-;": "terminal_panel::ToggleFocus",
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "ctrl-w": "pane::CloseActiveItem"
     }
   }
 ]
