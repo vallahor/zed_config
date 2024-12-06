@@ -12,6 +12,9 @@
 // custom settings, run the `open default settings` command
 
 // from the command palette or from `Zed` application menu.
+//
+// color
+// http://colrd.com/create/color/
 
 {
   "auto_update_extensions": {
@@ -61,9 +64,6 @@
   "languages": {
     "Python": {
       "language_servers": ["!pylsp", "pyright", "..."],
-      "formatter": null
-    },
-    "JavaScript": {
       "formatter": null
     },
     "PHP": {
