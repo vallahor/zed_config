@@ -28,7 +28,7 @@
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
-    "highlight_on_yank_duration": 300
+    "highlight_on_yank_duration": 400
   },
   "ui_font_size": 16,
   "relative_line_numbers": true,
