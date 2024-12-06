@@ -31,6 +31,7 @@
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 400
   },
+  "show_completions_on_input": true,
   "ui_font_size": 16,
   "relative_line_numbers": true,
   "buffer_font_family": "JetBrains Mono",
