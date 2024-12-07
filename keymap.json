@@ -3,7 +3,6 @@
     "context": "VimControl && !menu",
     "use_layout_keys": true,
     "bindings": {
-      "ctrl-shift-u": "editor::SelectAllMatches", // Select all occurrences of current selection
       "ctrl-h": ["editor::SelectPrevious", { "replace_newest": false }],
       "ctrl-l": ["editor::SelectNext", { "replace_newest": false }],
       "H": ["editor::SelectPrevious", { "replace_newest": true }],
@@ -107,7 +106,9 @@
       "shift-r": "vim::ToggleReplace",
       "0": "vim::StartOfLine",
       // "home": "vim::StartOfLine",
-      // "ctrl-f": "vim::PageDown",
+      // "ctrl-f": "vim::StartOfLine",
+      "ctrl-u": "editor::UndoSelection",
+      "ctrl-shift-u": "editor::RedoSelection",
       "pagedown": "vim::PageDown",
       // "ctrl-b": "vim::PageUp",
       "pageup": "vim::PageUp",
@@ -349,8 +350,8 @@
       "ctrl-x ctrl-c": "editor::ShowInlineCompletion", // zed specific
       "ctrl-x ctrl-l": "editor::ToggleCodeActions", // zed specific
       "ctrl-x ctrl-z": "editor::Cancel",
-      "ctrl-w": "editor::DeleteToPreviousWordStart",
-      "ctrl-u": "editor::DeleteToBeginningOfLine",
+      // "ctrl-w": "editor::DeleteToPreviousWordStart",
+      // "ctrl-u": "editor::DeleteToBeginningOfLine",
       "ctrl-t": "vim::Indent",
       "ctrl-d": "vim::Outdent",
       "ctrl-v": "editor::Paste",
@@ -694,6 +695,17 @@
     }
   },
 
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-;": "terminal_panel::ToggleFocus",
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "ctrl-w": "pane::CloseActiveItem",
+      "home": "pane::ActivatePrevItem",
+      "end": "pane::ActivateNextItem",
+      "ctrl-f": "project_search::ToggleFocus"
+    }
+  },
   {
     "context": "Terminal",
     "bindings": {
