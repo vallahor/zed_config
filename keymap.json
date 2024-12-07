@@ -63,10 +63,6 @@
       // "b": "vim::PreviousSubwordStart",
       // "e": "vim::NextSubwordEnd",
       // "g e": "vim::PreviousSubwordEnd",
-      "w": ["vim::NextSubwordStart", { "ignorePunctuation": false }],
-      "e": ["vim::NextSubwordEnd", { "ignorePunctuation": false }],
-      "b": ["vim::PreviousSubwordStart", { "ignorePunctuation": false }],
-      "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": false }],
       "/": "vim::Search",
       "g /": "pane::DeploySearch",
       "?": ["vim::Search", { "backwards": true }],
@@ -732,6 +728,16 @@
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-,": "pane::ActivatePrevItem",
       "ctrl-.": "pane::ActivateNextItem"
+    }
+  },
+
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": ["vim::NextSubwordStart", { "ignorePunctuation": false }],
+      "e": ["vim::NextSubwordEnd", { "ignorePunctuation": false }],
+      "b": ["vim::PreviousSubwordStart", { "ignorePunctuation": false }],
+      "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": false }]
     }
   }
 ]

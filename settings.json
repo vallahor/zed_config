@@ -18,6 +18,10 @@
 // https://colordesigner.io/gradient-generator
 
 {
+  "features": {
+    "copilot": false,
+    "inline_completion_provider": "none"
+  },
   "auto_update_extensions": {
     "vue": false
   },
