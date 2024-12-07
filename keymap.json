@@ -192,6 +192,7 @@
       "ctrl-6": "pane::AlternateFile"
     }
   },
+
   {
     "context": "vim_mode == normal",
     "use_layout_keys": true,
@@ -265,6 +266,7 @@
       // "[ c": "editor::GoToPrevHunk"
     }
   },
+
   {
     "context": "VimControl && VimCount",
     "use_layout_keys": true,
@@ -273,6 +275,7 @@
       ":": "vim::CountCommand"
     }
   },
+
   {
     "context": "vim_mode == visual",
     "use_layout_keys": true,
@@ -331,6 +334,7 @@
       // "] x": "editor::SelectSmallerSyntaxNode"
     }
   },
+
   {
     "context": "vim_mode == insert",
     "use_layout_keys": true,
@@ -362,6 +366,7 @@
       "ctrl-o": "vim::TemporaryNormal"
     }
   },
+
   {
     "context": "vim_mode == insert && !(showing_code_actions || showing_completions)",
     "use_layout_keys": true,
@@ -370,6 +375,7 @@
       "ctrl-n": "editor::ShowCompletions"
     }
   },
+
   {
     "context": "vim_mode == replace",
     "use_layout_keys": true,
@@ -388,6 +394,7 @@
       "insert": "vim::InsertBefore"
     }
   },
+
   {
     "context": "vim_mode == waiting",
     "use_layout_keys": true,
@@ -402,6 +409,7 @@
       "ctrl-q": ["vim::PushOperator", { "Literal": {} }]
     }
   },
+
   {
     "context": "vim_mode == operator",
     "use_layout_keys": true,
@@ -411,6 +419,7 @@
       "ctrl-[": "vim::ClearOperators"
     }
   },
+
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "use_layout_keys": true,
@@ -440,6 +449,7 @@
       "shift-i": ["vim::IndentObj", { "includeBelow": true }]
     }
   },
+
   {
     "context": "vim_operator == c",
     "use_layout_keys": true,
@@ -449,6 +459,7 @@
       "s": ["vim::PushOperator", { "ChangeSurrounds": {} }]
     }
   },
+
   {
     "context": "vim_operator == d",
     "use_layout_keys": true,
@@ -459,6 +470,7 @@
       "p": "editor::RevertSelectedHunks" // "d p"
     }
   },
+
   {
     "context": "vim_operator == gu",
     "use_layout_keys": true,
@@ -467,6 +479,7 @@
       "u": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == gU",
     "use_layout_keys": true,
@@ -475,6 +488,7 @@
       "shift-u": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == g~",
     "use_layout_keys": true,
@@ -483,6 +497,7 @@
       "~": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == gq",
     "use_layout_keys": true,
@@ -493,6 +508,7 @@
       "w": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == y",
     "use_layout_keys": true,
@@ -501,6 +517,7 @@
       "s": ["vim::PushOperator", { "AddSurrounds": {} }]
     }
   },
+
   {
     "context": "vim_operator == ys",
     "use_layout_keys": true,
@@ -508,6 +525,7 @@
       "s": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == >",
     "use_layout_keys": true,
@@ -515,6 +533,7 @@
       ">": "vim::CurrentLine"
     }
   },
+
   {
     "context": "vim_operator == <",
     "use_layout_keys": true,
@@ -584,6 +603,7 @@
       "escape": "buffer_search::Dismiss"
     }
   },
+
   {
     "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
     "use_layout_keys": true,
@@ -684,6 +704,7 @@
       "ctrl-/": "workspace::ToggleBottomDock"
     }
   },
+
   {
     "context": "Editor && showing_completions && vim_mode == insert",
     "bindings": {
@@ -705,6 +726,7 @@
       "ctrl-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
     }
   },
+
   {
     "context": "Terminal",
     "bindings": {
@@ -714,6 +736,7 @@
       "ctrl-w": "pane::CloseActiveItem"
     }
   },
+
   {
     "context": "ProjectDianostics",
     "bindings": {
@@ -722,6 +745,7 @@
       "ctrl-.": "pane::ActivateNextItem"
     }
   },
+
   {
     "context": "ProjectSearch",
     "bindings": {
