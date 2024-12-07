@@ -279,6 +279,8 @@
     "context": "vim_mode == visual",
     "use_layout_keys": true,
     "bindings": {
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      ">": ["workspace::SendKeystrokes", "> g v"],
       "s": ["vim::PushOperator", { "AddSurrounds": {} }],
       "ctrl-.": ["vim::Increment", { "step": true }],
       "ctrl-,": ["vim::Decrement", { "step": true }],
@@ -320,8 +322,6 @@
       "ctrl-c": ["vim::SwitchMode", "Normal"],
       "escape": ["vim::SwitchMode", "Normal"],
       "ctrl-[": ["vim::SwitchMode", "Normal"],
-      ">": "vim::Indent",
-      "<": "vim::Outdent",
       "=": "vim::AutoIndent",
       "i": ["vim::PushOperator", { "Object": { "around": false } }],
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
@@ -681,7 +681,9 @@
     "bindings": {
       // "left": ["workspace::ActivatePaneInDirection", "Left"]
       "ctrl-b": "project_panel::ToggleFocus",
-      "ctrl-t": "workspace::ToggleLeftDock"
+      "ctrl-t": "workspace::ToggleLeftDock",
+      "ctrl-;": "terminal_panel::ToggleFocus",
+      "ctrl-/": "workspace::ToggleBottomDock"
     }
   },
   {

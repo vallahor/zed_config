@@ -48,7 +48,7 @@
         "search.match_background": "#373337",
         "panel.background": "#121112",
         "panel.focused_border": "#715569",
-        "pane.focused_border": null,
+        "pane.focused_border": "#715569",
         "scrollbar.thumb.background": "#221a22",
         "scrollbar.thumb.hover_background": "#d16d8a",
         "scrollbar.thumb.border": "#221a22",
@@ -148,39 +148,39 @@
             "selection": "#471A37"
           },
           {
-            "cursor": "#be5046",
-            "background": "#be5046",
-            "selection": "#be50463d"
+            "cursor": "#94737c",
+            "background": "#222022",
+            "selection": "#5d3249"
           },
           {
-            "cursor": "#bf956a",
-            "background": "#bf956a",
-            "selection": "#bf956a3d"
+            "cursor": "#9e8087",
+            "background": "#222022",
+            "selection": "#522640"
           },
           {
-            "cursor": "#b477cf",
-            "background": "#b477cf",
-            "selection": "#b477cf3d"
+            "cursor": "#896570",
+            "background": "#222022",
+            "selection": "#683f52"
           },
           {
-            "cursor": "#6eb4bf",
-            "background": "#6eb4bf",
-            "selection": "#6eb4bf3d"
+            "cursor": "#7e5866",
+            "background": "#222022",
+            "selection": "#734b5c"
           },
           {
-            "cursor": "#d07277",
-            "background": "#d07277",
-            "selection": "#d072773d"
+            "cursor": "#9c8279",
+            "background": "#222022",
+            "selection": "#3e2e53"
           },
           {
-            "cursor": "#dec184",
-            "background": "#dec184",
-            "selection": "#dec1843d"
+            "cursor": "#867a63",
+            "background": "#222022",
+            "selection": "#2a4263"
           },
           {
-            "cursor": "#a1c181",
-            "background": "#a1c181",
-            "selection": "#a1c1813d"
+            "cursor": "#697357",
+            "background": "#222022",
+            "selection": "#1b5265"
           }
         ],
         "syntax": {
