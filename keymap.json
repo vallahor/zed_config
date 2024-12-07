@@ -702,5 +702,21 @@
       "ctrl-/": "workspace::ToggleBottomDock",
       "ctrl-w": "pane::CloseActiveItem"
     }
+  },
+  {
+    "context": "ProjectDianostics",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "home": "pane::ActivatePrevItem",
+      "end": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "ProjectSearch",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "home": "pane::ActivatePrevItem",
+      "end": "pane::ActivateNextItem"
+    }
   }
 ]
