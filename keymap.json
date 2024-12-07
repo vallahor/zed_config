@@ -3,14 +3,15 @@
     "context": "VimControl && !menu",
     "use_layout_keys": true,
     "bindings": {
+      "ctrl-shift-u": "editor::SelectAllMatches", // Select all occurrences of current selection
       "ctrl-h": ["editor::SelectPrevious", { "replace_newest": false }],
       "ctrl-l": ["editor::SelectNext", { "replace_newest": false }],
       "H": ["editor::SelectPrevious", { "replace_newest": true }],
       "L": ["editor::SelectNext", { "replace_newest": true }],
       "m": "editor::SelectLargerSyntaxNode", // Expand Selection
       "shift-m": "editor::SelectSmallerSyntaxNode", // Shrink Selection
-      "home": "pane::ActivatePrevItem",
-      "end": "pane::ActivateNextItem",
+      "ctrl-,": "pane::ActivatePrevItem",
+      "ctrl-.": "pane::ActivateNextItem",
       "ctrl-b": "project_panel::ToggleFocus",
       "ctrl-t": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
@@ -106,9 +107,7 @@
       "shift-r": "vim::ToggleReplace",
       "0": "vim::StartOfLine",
       // "home": "vim::StartOfLine",
-      // "ctrl-f": "vim::StartOfLine",
-      "ctrl-u": "editor::UndoSelection",
-      "ctrl-shift-u": "editor::RedoSelection",
+      // "ctrl-f": "vim::PageDown",
       "pagedown": "vim::PageDown",
       // "ctrl-b": "vim::PageUp",
       "pageup": "vim::PageUp",
@@ -119,8 +118,8 @@
       // "g" commands
       "g g": "vim::StartOfDocument",
       "g h": "editor::Hover",
-      "g t": "pane::ActivateNextItem",
-      "g shift-t": "pane::ActivatePrevItem",
+      // "ctrl-. t": "pane::ActivateNextItem",
+      // "ctrl-, shift-t": "pane::ActivatePrevItem",
       "g d": "editor::GoToDefinition",
       "g shift-d": "editor::GoToDeclaration",
       "g y": "editor::GoToTypeDefinition",
@@ -153,8 +152,8 @@
       "g v": "vim::RestoreVisualSelection",
       "g ]": "editor::GoToDiagnostic",
       "g [": "editor::GoToPrevDiagnostic",
-      "ctrl-.": "editor::GoToDiagnostic",
-      "ctrl-,": "editor::GoToPrevDiagnostic",
+      "]": "editor::GoToDiagnostic",
+      "[": "editor::GoToPrevDiagnostic",
       "g i": "vim::InsertAtPrevious",
       "g ,": "vim::ChangeListNewer",
       "g ;": "vim::ChangeListOlder",
@@ -209,6 +208,8 @@
       "down": ["workspace::ActivatePaneInDirection", "Down"],
       "ctrl-k": "editor::AddSelectionAbove", // Insert Cursor Above
       "ctrl-j": "editor::AddSelectionBelow", // Insert Cursor Below
+      "ctrl-shift-k": "editor::AddSelectionAbove", // should skip current line
+      "ctrl-shift-j": "editor::AddSelectionBelow", // should skip current line
       "g c": "vim::ToggleComments",
       "|": "pane::SplitRight",
       "ctrl-\\": "workspace::NewFileSplitVertical",
@@ -256,16 +257,16 @@
       "\"": ["vim::PushOperator", "Register"],
       "g q": ["vim::PushOperator", "Rewrap"],
       "g w": ["vim::PushOperator", "Rewrap"],
-      // "ctrl-pagedown": "pane::ActivateNextItem",
-      // "ctrl-pageup": "pane::ActivatePrevItem",
-      "insert": "vim::InsertBefore",
+      // ctrl-.ctrl-pagedown": "pane::ActivateNextItem",
+      // ctrl-,ctrl-pageup": "pane::ActivatePrevItem",
+      "insert": "vim::InsertBefore"
       // tree-sitter related commands
-      "[ x": "editor::SelectLargerSyntaxNode",
-      "] x": "editor::SelectSmallerSyntaxNode",
-      "] d": "editor::GoToDiagnostic",
-      "[ d": "editor::GoToPrevDiagnostic",
-      "] c": "editor::GoToHunk",
-      "[ c": "editor::GoToPrevHunk"
+      // "[ x": "editor::SelectLargerSyntaxNode",
+      // "] x": "editor::SelectSmallerSyntaxNode",
+      // "] d": "editor::GoToDiagnostic",
+      // "[ d": "editor::GoToPrevDiagnostic",
+      // "] c": "editor::GoToHunk",
+      // "[ c": "editor::GoToPrevHunk"
     }
   },
   {
@@ -283,8 +284,8 @@
       "<": ["workspace::SendKeystrokes", "< g v"],
       ">": ["workspace::SendKeystrokes", "> g v"],
       "s": ["vim::PushOperator", { "AddSurrounds": {} }],
-      "ctrl-.": ["vim::Increment", { "step": true }],
-      "ctrl-,": ["vim::Decrement", { "step": true }],
+      "space .": ["vim::Increment", { "step": true }],
+      "space ,": ["vim::Decrement", { "step": true }],
       "up": "editor::MoveLineUp",
       "down": "editor::MoveLineDown",
       "v": "vim::ToggleVisualLine",
@@ -328,10 +329,10 @@
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
       "g c": "vim::ToggleComments",
       "g q": "vim::Rewrap",
-      "\"": ["vim::PushOperator", "Register"],
+      "\"": ["vim::PushOperator", "Register"]
       // tree-sitter related commands
-      "[ x": "editor::SelectLargerSyntaxNode",
-      "] x": "editor::SelectSmallerSyntaxNode"
+      // "[ x": "editor::SelectLargerSyntaxNode",
+      // "] x": "editor::SelectSmallerSyntaxNode"
     }
   },
   {
@@ -350,8 +351,8 @@
       "ctrl-x ctrl-c": "editor::ShowInlineCompletion", // zed specific
       "ctrl-x ctrl-l": "editor::ToggleCodeActions", // zed specific
       "ctrl-x ctrl-z": "editor::Cancel",
-      // "ctrl-w": "editor::DeleteToPreviousWordStart",
-      // "ctrl-u": "editor::DeleteToBeginningOfLine",
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+      "ctrl-u": "editor::DeleteToBeginningOfLine",
       "ctrl-t": "vim::Indent",
       "ctrl-d": "vim::Outdent",
       "ctrl-v": "editor::Paste",
@@ -701,9 +702,11 @@
       "ctrl-;": "terminal_panel::ToggleFocus",
       "ctrl-/": "workspace::ToggleBottomDock",
       "ctrl-w": "pane::CloseActiveItem",
-      "home": "pane::ActivatePrevItem",
-      "end": "pane::ActivateNextItem",
-      "ctrl-f": "project_search::ToggleFocus"
+      "ctrl-,": "pane::ActivatePrevItem",
+      "ctrl-.": "pane::ActivateNextItem",
+      "ctrl-shift-,": "pane::SwapItemLeft",
+      "ctrl-shift-.": "pane::SwapItemRight",
+      "ctrl-shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }]
     }
   },
   {
@@ -719,16 +722,16 @@
     "context": "ProjectDianostics",
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
-      "home": "pane::ActivatePrevItem",
-      "end": "pane::ActivateNextItem"
+      "ctrl-,": "pane::ActivatePrevItem",
+      "ctrl-.": "pane::ActivateNextItem"
     }
   },
   {
     "context": "ProjectSearch",
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
-      "home": "pane::ActivatePrevItem",
-      "end": "pane::ActivateNextItem"
+      "ctrl-,": "pane::ActivatePrevItem",
+      "ctrl-.": "pane::ActivateNextItem"
     }
   }
 ]
