@@ -50,7 +50,7 @@
     "custom": 1.7
   },
   "indent_guides": {
-    "enabled": false
+    "enabled": true
   },
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
@@ -89,9 +89,10 @@
     "enabled": false
   },
   "project_panel": {
+    "default_width": 400,
     "button": true,
     "indent_guides": {
-      "show": "never"
+      "show": "always"
     }
   },
   "files_icons": true,
