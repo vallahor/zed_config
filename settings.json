@@ -61,7 +61,7 @@
   },
   "cursor_blink": false,
   "cursor_shape": "block",
-  "theme": "vallahor",
+  "theme": "brnrds",
   "languages": {
     "Python": {
       "language_servers": ["!pylsp", "pyright", "..."]
