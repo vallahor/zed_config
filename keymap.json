@@ -13,8 +13,8 @@
       "shift-m": "editor::SelectSmallerSyntaxNode", // Shrink Selection
       "ctrl-,": "pane::ActivatePrevItem",
       "ctrl-.": "pane::ActivateNextItem",
-      "ctrl-b": "project_panel::ToggleFocus",
-      "ctrl-t": "workspace::ToggleLeftDock",
+      "ctrl-t": "project_panel::ToggleFocus",
+      "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
       "ctrl-`": "workspace::NewTerminal",
       "ctrl-/": "workspace::ToggleBottomDock",
@@ -648,7 +648,7 @@
       "enter": "project_panel::OpenPermanent",
       // "escape": "project_panel::ToggleFocus",
       // "escape": "menu::Cancel",
-      "ctrl-b": "project_panel::ToggleFocus",
+      "ctrl-t": "project_panel::ToggleFocus",
       "right": "project_panel::ToggleFocus",
       "q": "workspace::ToggleLeftDock",
       "h": "project_panel::CollapseSelectedEntry",
@@ -666,7 +666,7 @@
       "shift-g": "menu::SelectLast",
       "g g": "menu::SelectFirst",
       "-": "project_panel::SelectParent",
-      "ctrl-t": "workspace::ToggleLeftDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-6": "pane::AlternateFile"
     }
   },
@@ -700,8 +700,8 @@
     "context": "Pane",
     "bindings": {
       // "left": ["workspace::ActivatePaneInDirection", "Left"]
-      "ctrl-b": "project_panel::ToggleFocus",
-      "ctrl-t": "workspace::ToggleLeftDock",
+      "ctrl-t": "project_panel::ToggleFocus",
+      "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
       "ctrl-/": "workspace::ToggleBottomDock"
     }
