@@ -140,6 +140,11 @@
     "code_actions": false
   },
   "lsp": {
+    "vscode-html-language-": {
+      "settings": {
+        "html": { "tagAutoclosing": true }
+      }
+    },
     "pyright": {
       "settings": {
         "python.analysis": {
@@ -167,16 +172,4 @@
       }
     }
   }
-  // "phpactor": {
-  // "binary": {
-  //   "path": "C:\\apps\\phpactor\\phpactor.phar",
-  //   "arguments": ["language-server"]
-  // }
-  // }
-  // "emmet-language-server": {
-  //   "binary": {
-  //     "path": "C:\\Users\\Vallahor\\AppData\\Local\\Zed\\extensions\\work\\emmet\\node_modules\\.bin\\emmet-language-server"
-  //   }
-  // }
-  // }
 }
