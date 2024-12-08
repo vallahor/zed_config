@@ -3,7 +3,8 @@
     "context": "VimControl && !menu",
     "use_layout_keys": true,
     "bindings": {
-      "ctrl-shift-u": "editor::SelectAllMatches", // Select all occurrences of current selection
+      "ctrl-u": "editor::UndoSelection",
+      "ctrl-shift-u": "editor::RedoSelection",
       "ctrl-h": ["editor::SelectPrevious", { "replace_newest": false }],
       "ctrl-l": ["editor::SelectNext", { "replace_newest": false }],
       "H": ["editor::SelectPrevious", { "replace_newest": true }],

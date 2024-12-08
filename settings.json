@@ -93,8 +93,6 @@
     "enabled": false
   },
   "project_panel": {
-    "default_width": 500,
-    "indent_size": 15,
     "indent_guides": {
       "show": "always"
     }
