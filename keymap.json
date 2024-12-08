@@ -297,6 +297,7 @@
       "d": "vim::VisualDelete",
       // "x": "vim::VisualDelete",
       "x": "editor::Delete",
+      "ctrl-m": "editor::SplitSelectionIntoLines",
       "shift-d": "vim::VisualDeleteLine",
       "shift-x": "vim::VisualDeleteLine",
       "y": "vim::VisualYank",
