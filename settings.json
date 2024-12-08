@@ -141,6 +141,12 @@
     "code_actions": false
   },
   "lsp": {
+    "emmet-language-server": {
+      "binary": {
+        "path": "C:/Users/Vallahor/.bun/bin/emmet-language-server.exe",
+        "arguments": ["--stdio"]
+      }
+    },
     "vscode-html-language-": {
       "settings": {
         "html": { "tagAutoclosing": true }
