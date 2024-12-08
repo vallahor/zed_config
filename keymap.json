@@ -7,8 +7,9 @@
       "ctrl-shift-u": "editor::RedoSelection",
       "ctrl-h": ["editor::SelectPrevious", { "replace_newest": false }],
       "ctrl-l": ["editor::SelectNext", { "replace_newest": false }],
-      "H": ["editor::SelectPrevious", { "replace_newest": true }],
-      "L": ["editor::SelectNext", { "replace_newest": true }],
+      "shift-h": ["editor::SelectPrevious", { "replace_newest": true }],
+      "shift-l": ["editor::SelectNext", { "replace_newest": true }],
+      "ctrl-shift-l": "editor::SelectAllMatches",
       "m": "editor::SelectLargerSyntaxNode", // Expand Selection
       "shift-m": "editor::SelectSmallerSyntaxNode", // Shrink Selection
       "ctrl-,": "pane::ActivatePrevItem",
@@ -281,6 +282,7 @@
     "context": "vim_mode == visual",
     "use_layout_keys": true,
     "bindings": {
+      ")": ["workspace::SendKeystrokes", "end left"],
       "<": ["workspace::SendKeystrokes", "< g v"],
       ">": ["workspace::SendKeystrokes", "> g v"],
       "s": ["vim::PushOperator", { "AddSurrounds": {} }],
@@ -341,7 +343,7 @@
     "context": "vim_mode == insert",
     "use_layout_keys": true,
     "bindings": {
-      "ctrl-y": "editor::ShowCompletions",
+      // "ctrl-y": "editor::ShowCompletions",
       "ctrl-tab": "editor::ShowCompletions",
       "ctrl-backspace": "editor::DeleteToPreviousSubwordStart",
       "escape": "vim::NormalBefore",
@@ -601,8 +603,37 @@
     "context": "BufferSearchBar && !in_replace",
     "use_layout_keys": true,
     "bindings": {
+      "ctrl-r": "search::ToggleReplace",
       "enter": "vim::SearchSubmit",
       "escape": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "ProjectSearchBar && in_replace > Editor",
+    "use_layout_keys": true,
+    "bindings": {
+      "ctrl-r": "search::ToggleReplace",
+      "ctrl-n": "search::ReplaceNext",
+      "ctrl-shift-n": "search::ReplaceAll"
+    }
+  },
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
+    "use_layout_keys": true,
+    "bindings": {
+      "escape": "buffer_search::Dismiss",
+      "ctrl-r": "search::ToggleReplace",
+      "ctrl-n": "search::ReplaceNext",
+      "ctrl-shift-n": "search::ReplaceAll"
+    }
+  },
+
+  {
+    "context": "VimControl && !menu && in_replace > Editor",
+    "use_layout_keys": true,
+    "bindings": {
+      "ctrl-n": "search::ReplaceNext",
+      "ctrl-shift-n": "search::ReplaceAll"
     }
   },
 
@@ -684,6 +715,7 @@
 
   {
     "context": "vim_mode == normal || vim_mode == visual",
+    "use_layout_keys": true,
     "bindings": {
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "shift-c": ["workspace::SendKeystrokes", "\" _ shift-c"],
@@ -698,17 +730,20 @@
 
   {
     "context": "Pane",
+    "use_layout_keys": true,
     "bindings": {
       // "left": ["workspace::ActivatePaneInDirection", "Left"]
       "ctrl-t": "project_panel::ToggleFocus",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
-      "ctrl-/": "workspace::ToggleBottomDock"
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "ctrl-shift-o": "pane::ReopenClosedItem"
     }
   },
 
   {
     "context": "Editor && showing_completions && vim_mode == insert",
+    "use_layout_keys": true,
     "bindings": {
       "enter": "editor::Newline",
       "tab": "editor::ComposeCompletion"
@@ -717,7 +752,9 @@
 
   {
     "context": "Editor",
+    "use_layout_keys": true,
     "bindings": {
+      "ctrl-shift-o": "pane::ReopenClosedItem",
       "ctrl-;": "terminal_panel::ToggleFocus",
       "ctrl-/": "workspace::ToggleBottomDock",
       "ctrl-w": "pane::CloseActiveItem",
@@ -731,6 +768,7 @@
 
   {
     "context": "Terminal",
+    "use_layout_keys": true,
     "bindings": {
       "escape": "terminal::ToggleViMode",
       "ctrl-;": "terminal_panel::ToggleFocus",
@@ -740,7 +778,8 @@
   },
 
   {
-    "context": "ProjectDianostics",
+    "context": "ProjectDianostics || ProjectSearch",
+    "use_layout_keys": true,
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-,": "pane::ActivatePrevItem",
@@ -749,16 +788,8 @@
   },
 
   {
-    "context": "ProjectSearch",
-    "bindings": {
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-,": "pane::ActivatePrevItem",
-      "ctrl-.": "pane::ActivateNextItem"
-    }
-  },
-
-  {
-    "context": "VimControl && !menu && vim_mode != operator",
+    "context": "VimControl && !menu",
+    "use_layout_keys": true,
     "bindings": {
       // "w": ["vim::NextSubwordStart", { "ignorePunctuation": false }],
       // "e": ["vim::NextSubwordEnd", { "ignorePunctuation": false }],
@@ -769,11 +800,6 @@
       "e": "vim::NextWordEnd",
       "b": "vim::PreviousWordStart",
       "g e": "vim::PreviousWordEnd"
-      // // Subword motions
-      // "w": "vim::NextSubwordStart",
-      // "b": "vim::PreviousSubwordStart",
-      // "e": "vim::NextSubwordEnd",
-      // "g e": "vim::PreviousSubwordEnd"
     }
   }
 ]
