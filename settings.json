@@ -93,7 +93,7 @@
     "enabled": false
   },
   "project_panel": {
-    "default_width": 340,
+    "default_width": 400,
     "auto_fold_dirs": false,
     "indent_guides": {
       "show": "always"

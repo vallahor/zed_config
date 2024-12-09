@@ -56,19 +56,19 @@
       "}": "vim::EndOfParagraph",
       // "|": "vim::GoToColumn",
       // Word motions
-      // "w": "vim::NextWordStart",
-      // "e": "vim::NextWordEnd",
-      // "b": "vim::PreviousWordStart",
-      // "g e": "vim::PreviousWordEnd",
+      "w": "vim::NextWordStart",
+      "e": "vim::NextWordEnd",
+      "b": "vim::PreviousWordStart",
+      "g e": "vim::PreviousWordEnd",
       // // Subword motions
       // "w": "vim::NextSubwordStart",
       // "b": "vim::PreviousSubwordStart",
       // "e": "vim::NextSubwordEnd",
       // "g e": "vim::PreviousSubwordEnd",
-      "w": ["vim::NextSubwordStart", { "ignorePunctuation": false }],
-      "e": ["vim::NextSubwordEnd", { "ignorePunctuation": false }],
-      "b": ["vim::PreviousSubwordStart", { "ignorePunctuation": false }],
-      "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": false }],
+      // "w": ["vim::NextSubwordStart", { "ignorePunctuation": false }],
+      // "e": ["vim::NextSubwordEnd", { "ignorePunctuation": false }],
+      // "b": ["vim::PreviousSubwordStart", { "ignorePunctuation": false }],
+      // "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": false }],
       "/": "vim::Search",
       "g /": "pane::DeploySearch",
       "?": ["vim::Search", { "backwards": true }],
@@ -262,7 +262,7 @@
       "g w": ["vim::PushOperator", "Rewrap"],
       // ctrl-.ctrl-pagedown": "pane::ActivateNextItem",
       // ctrl-,ctrl-pageup": "pane::ActivatePrevItem",
-      "insert": "vim::InsertBefore"
+      // "insert": "vim::InsertBefore",
       // tree-sitter related commands
       // "[ x": "editor::SelectLargerSyntaxNode",
       // "] x": "editor::SelectSmallerSyntaxNode",
@@ -270,9 +270,20 @@
       // "[ d": "editor::GoToPrevDiagnostic",
       // "] c": "editor::GoToHunk",
       // "[ c": "editor::GoToPrevHunk"
+      "pageup": "editor::GoToPrevHunk",
+      "pagedown": "editor::GoToHunk"
     }
   },
 
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "up": "editor::ContextMenuPrev",
+      "down": "editor::ContextMenuNext",
+      "enter": "editor::ConfirmCodeAction",
+      "tab": "editor::ConfirmCodeAction"
+    }
+  },
   {
     "context": "VimControl && VimCount",
     "use_layout_keys": true,
