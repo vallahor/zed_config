@@ -22,6 +22,7 @@
     "copilot": false,
     "inline_completion_provider": "none"
   },
+  "show_completion_documentation": false, // buggy. resizes a lot and sometimes reset to the first element
   "auto_update_extensions": {
     "vue": false
   },
