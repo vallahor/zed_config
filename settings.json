@@ -41,18 +41,24 @@
   "buffer_font_family": "JetBrains Mono",
   "ui_font_family": "JetBrains Mono",
   "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
     "font_family": "JetBrains Mono",
-    "font_weight": 200
+    "font_weight": 100
   },
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "buffer_font_features": {
     "liga": true
   },
-  "buffer_font_weight": 200,
-  "ui_font_weight": 200,
+  "buffer_font_weight": 100,
+  "ui_font_weight": 100,
   "buffer_line_height": {
-    "custom": 1.7
+    "custom": 1.8
+  },
+  "ui_font_features": {
+    "calt": false
   },
   "indent_guides": {
     "enabled": true
@@ -143,6 +149,12 @@
     "code_actions": false
   },
   "lsp": {
+    // "vscode-html-language-server": {
+    //   "binary": {
+    //     "path": "C:/Users/Vallahor/AppData/Roaming/npm/vscode-html-language-server",
+    //     "arguments": ["--stdio"]
+    //   }
+    // },
     "emmet-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/emmet-language-server.exe",
