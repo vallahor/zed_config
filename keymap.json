@@ -211,8 +211,8 @@
       "down": ["workspace::ActivatePaneInDirection", "Down"],
       "ctrl-k": "editor::AddSelectionAbove", // Insert Cursor Above
       "ctrl-j": "editor::AddSelectionBelow", // Insert Cursor Below
-      "ctrl-shift-k": "editor::AddSelectionAbove", // should skip current line
-      "ctrl-shift-j": "editor::AddSelectionBelow", // should skip current line
+      // "ctrl-shift-k": "editor::AddSelectionAbove", // should skip current line
+      // "ctrl-shift-j": "editor::AddSelectionBelow", // should skip current line
       "g c": "vim::ToggleComments",
       "|": "pane::SplitRight",
       "ctrl-\\": "workspace::NewFileSplitVertical",

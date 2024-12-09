@@ -94,6 +94,7 @@
   },
   "project_panel": {
     "default_width": 340,
+    "auto_fold_dirs": false,
     "indent_guides": {
       "show": "always"
     }
@@ -144,6 +145,12 @@
     "emmet-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/emmet-language-server.exe",
+        "arguments": ["--stdio"]
+      }
+    },
+    "vue-language-server": {
+      "binary": {
+        "path": "C:/Users/Vallahor/.bun/bin/vue-language-server.exe",
         "arguments": ["--stdio"]
       }
     },
