@@ -45,15 +45,16 @@
       "breadcrumbs": false
     },
     "font_family": "JetBrains Mono",
-    "font_weight": 100
+    "font_weight": 200,
+    "font_size": 14
   },
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "buffer_font_features": {
     "liga": true
   },
-  "buffer_font_weight": 100,
-  "ui_font_weight": 100,
+  "buffer_font_weight": 200,
+  "ui_font_weight": 200,
   "buffer_line_height": {
     "custom": 1.8
   },
@@ -148,7 +149,14 @@
     "folds": false,
     "code_actions": false
   },
+
   "lsp": {
+    "prisma-language-server": {
+      "binary": {
+        "path": "C:/Users/Vallahor/.bun/bin/prisma-language-server.exe",
+        "arguments": ["--stdio"]
+      }
+    },
     // "vscode-html-language-server": {
     //   "binary": {
     //     "path": "C:/Users/Vallahor/AppData/Roaming/npm/vscode-html-language-server",
