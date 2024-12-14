@@ -47,10 +47,10 @@
     "font_family": "JetBrains Mono",
     "font_weight": 100,
     "line_height": "standard",
-    "font_size": 14
+    "font_size": 16
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_size": 17,
+  "buffer_font_size": 16,
   "buffer_font_features": {
     "liga": true
   },
