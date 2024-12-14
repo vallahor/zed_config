@@ -105,6 +105,7 @@
   "project_panel": {
     "default_width": 400,
     "auto_fold_dirs": false,
+    "git_status": false,
     "indent_guides": {
       "show": "always"
     }
@@ -150,6 +151,12 @@
     "runnables": false,
     "folds": false,
     "code_actions": false
+  },
+  "git": {
+    "git_gutter": "hide",
+    "inline_blame": {
+      "enabled": false
+    }
   },
 
   "lsp": {
