@@ -22,7 +22,7 @@
     "copilot": false,
     "inline_completion_provider": "none"
   },
-  "show_completion_documentation": false, // buggy. resizes a lot and sometimes reset to the first element
+  "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
   "auto_update_extensions": {
     "vue": false
   },
@@ -45,7 +45,7 @@
       "breadcrumbs": false
     },
     "font_family": "JetBrains Mono",
-    "font_weight": 100,
+    "font_weight": 200,
     "line_height": "standard",
     "font_size": 16
   },
@@ -54,8 +54,8 @@
   "buffer_font_features": {
     "liga": true
   },
-  "buffer_font_weight": 100,
-  "ui_font_weight": 100,
+  "buffer_font_weight": 200,
+  "ui_font_weight": 200,
   "buffer_line_height": {
     "custom": 1.7
     // "custom": 1.8
@@ -176,6 +176,13 @@
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/emmet-language-server.exe",
         "arguments": ["--stdio"]
+      },
+      "settings": {
+        "syntaxProfiles": {
+          "jsx": {
+            "self_closing_tag": true
+          }
+        }
       }
     },
     "vue-language-server": {
