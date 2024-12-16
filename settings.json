@@ -39,7 +39,8 @@
   "show_completions_on_input": true,
   "relative_line_numbers": true,
   "buffer_font_family": "JetBrains Mono",
-  "ui_font_family": "JetBrains Mono",
+  // "ui_font_family": "JetBrains Mono",
+  "ui_font_family": "Inter",
   "terminal": {
     "toolbar": {
       "breadcrumbs": false
@@ -47,15 +48,15 @@
     "font_family": "JetBrains Mono",
     "font_weight": 200,
     "line_height": "standard",
-    "font_size": 16
+    "font_size": 15
   },
-  "ui_font_size": 17,
-  "buffer_font_size": 16,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
   "buffer_font_features": {
     "liga": true
   },
   "buffer_font_weight": 200,
-  "ui_font_weight": 200,
+  "ui_font_weight": 300,
   "buffer_line_height": {
     "custom": 1.7
     // "custom": 1.8
