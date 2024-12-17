@@ -197,6 +197,11 @@
         "html": { "tagAutoclosing": true }
       }
     },
+    "ruff": {
+      "binary": {
+        "arguments": ["server", "--preview"]
+      }
+    },
     "pyright": {
       "settings": {
         "python.analysis": {
