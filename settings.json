@@ -76,7 +76,7 @@
   },
   "cursor_blink": false,
   "cursor_shape": "block",
-  "theme": "brnrds",
+  "theme": "Targino",
   "languages": {
     "Python": {
       "language_servers": ["!pylsp", "pyright", "..."]
