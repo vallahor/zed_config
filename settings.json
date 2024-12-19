@@ -222,6 +222,7 @@
         //   "wordpress-globals",
         //   "wp-cli"
         // ],
+        // "diagnostics": { "undefinedMethods": false },
         "files": {
           "maxSize": 5000000,
           "excluded": ["**/node_modules/**", "**/vendor/**"]
