@@ -46,9 +46,11 @@
     // "custom": 1.8
   },
 
-  // "ui_font_family": "Inter",
-  "ui_font_family": "JetBrains Mono",
-  "ui_font_size": 15,
+  // "ui_font_family": "JetBrains Mono",
+  // "ui_font_size": 15,
+  // "ui_font_weight": 200,
+  "ui_font_family": "Inter",
+  "ui_font_size": 16,
   "ui_font_weight": 200,
   "ui_font_features": {
     "calt": false
