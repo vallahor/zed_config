@@ -22,36 +22,38 @@
     "copilot": false,
     "inline_completion_provider": "none"
   },
+
   "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
+
   "vim_mode": true,
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 400
   },
+
   "show_completions_on_input": true,
   "relative_line_numbers": true,
+
   "buffer_font_family": "JetBrains Mono",
   "buffer_font_size": 15,
   "buffer_font_weight": 200,
   "buffer_font_features": {
     "liga": true
   },
+
   "buffer_line_height": {
-    "custom": 1.7
-    // "custom": 1.8
+    // "custom": 1.7
+    "custom": 1.8
   },
 
-  // "ui_font_family": "JetBrains Mono",
-  // "ui_font_size": 15,
-  // "ui_font_weight": 200,
   "ui_font_family": "Inter",
   "ui_font_size": 16,
-  "ui_font_weight": 200,
+  "ui_font_weight": 300,
   "ui_font_features": {
     "calt": false
   },
@@ -60,15 +62,19 @@
     "toolbar": {
       "breadcrumbs": false
     },
+
     "font_family": "JetBrains Mono",
     "font_weight": 200,
     "line_height": "standard",
     "font_size": 15
   },
 
+  "format_on_save": "on",
+
   "indent_guides": {
     "enabled": true
   },
+
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
   "toolbar": {
@@ -76,35 +82,14 @@
     "selections_menu": false,
     "quick_actions": false
   },
+
   "cursor_blink": false,
   "cursor_shape": "block",
   "theme": "Targino",
-  "languages": {
-    "Python": {
-      "language_servers": ["!pylsp", "pyright", "..."]
-      // "formatter": null
-    },
-    // "JavaScript": {
-    // "formatter": null,
-    // "format_on_save": "off"
-    // },
-    "PHP": {
-      "format_on_save": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
-      "formatter": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
-      "language_servers": ["intelephense", "!phpactor", "..."]
-    }
-  },
   "preview_tabs": {
     "enabled": false
   },
+
   "project_panel": {
     "default_width": 400,
     "auto_fold_dirs": false,
@@ -113,15 +98,18 @@
       "show": "always"
     }
   },
+
   "files_icons": true,
   "restore_on_startup": "last_session",
   "show_whitespaces": "none",
   "tab_bar": {
     "show_nav_history_buttons": false
   },
+
   "tabs": {
     "file_icons": true
   },
+
   "file_finder": {
     "file_icons": true
   },
@@ -155,6 +143,7 @@
     "folds": false,
     "code_actions": false
   },
+
   "git": {
     "git_gutter": "hide",
     "inline_blame": {
@@ -162,48 +151,122 @@
     }
   },
 
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": false,
+    "show_parameter_hints": false,
+    "show_other_hints": false
+  },
+
+  "languages": {
+    "Elixir": {
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "vscode-html-language-server",
+        "emmet-language-server"
+      ]
+    },
+
+    "HEEX": {
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "vscode-html-language-server",
+        "emmet-language-server"
+      ]
+    },
+
+    "Python": {
+      "language_servers": ["!pylsp", "pyright", "..."]
+      // "formatter": null
+    },
+
+    // "JavaScript": {
+    // "formatter": null,
+    // "format_on_save": "off"
+    // },
+    //
+    "PHP": {
+      "format_on_save": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "formatter": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "language_servers": ["intelephense", "!phpactor", "..."]
+    }
+  },
+
   "lsp": {
+    "elixir-ls": {
+      "settings": {
+        // "dialyzerEnabled": false
+      }
+    },
+
     "prisma-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/prisma-language-server.exe",
         "arguments": ["--stdio"]
       }
     },
+
     "vscode-html-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/AppData/Roaming/npm/vscode-html-language-server.cmd",
         "arguments": ["--stdio"]
       }
     },
+
     "emmet-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/emmet-language-server.exe",
         "arguments": ["--stdio"]
       },
+
       "settings": {
         "syntaxProfiles": {
           "jsx": {
+            "self_closing_tag": true
+          },
+
+          "html": {
             "self_closing_tag": true
           }
         }
       }
     },
+
     "vue-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/vue-language-server.exe",
         "arguments": ["--stdio"]
       }
     },
+
     "vscode-html-language-": {
       "settings": {
-        "html": { "tagAutoclosing": true }
+        "html": { "tagAutoclosing": true },
+
+        "tsx": { "tagAutoclosing": true },
+
+        "heex": { "tagAutoclosing": true }
       }
     },
+
     "ruff": {
       "binary": {
         "arguments": ["server", "--preview"]
       }
     },
+
     "pyright": {
       "settings": {
         "python.analysis": {
@@ -212,11 +275,13 @@
         }
       }
     },
+
     "intelephense": {
       "settings": {
         // "environment": {
         //   "includePaths": ["/path/to/lib"]
         // },
+        //
         // "stubs": [
         //   "wordpress",
         //   "woocommerce",
@@ -225,6 +290,7 @@
         //   "wp-cli"
         // ],
         // "diagnostics": { "undefinedMethods": false },
+        //
         "files": {
           "maxSize": 5000000,
           "excluded": ["**/node_modules/**", "**/vendor/**"]
