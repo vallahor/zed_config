@@ -222,6 +222,15 @@
       "binary": {
         "path": "C:/Users/Vallahor/AppData/Roaming/npm/vscode-html-language-server.cmd",
         "arguments": ["--stdio"]
+      },
+
+      "html": {
+        "settings": {
+          "includeLanguges": {
+            "HEEX": "html",
+            "Elixir": "html"
+          }
+        }
       }
     },
 
@@ -232,12 +241,25 @@
       },
 
       "settings": {
+        "includeLanguges": {
+          "HEEX": "heex",
+          "Elixir": "elixir"
+        },
+
         "syntaxProfiles": {
           "jsx": {
             "self_closing_tag": true
           },
 
           "html": {
+            "self_closing_tag": true
+          },
+
+          "heex": {
+            "self_closing_tag": true
+          },
+
+          "elixir": {
             "self_closing_tag": true
           }
         }
@@ -257,7 +279,9 @@
 
         "tsx": { "tagAutoclosing": true },
 
-        "heex": { "tagAutoclosing": true }
+        "heex": { "tagAutoclosing": true },
+
+        "elixir": { "tagAutoclosing": true }
       }
     },
 
