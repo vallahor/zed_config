@@ -23,7 +23,7 @@
     "inline_completion_provider": "none"
   },
 
-  "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
+  // "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
   "telemetry": {
     "diagnostics": false,
     "metrics": false

@@ -17,6 +17,7 @@
       "ctrl-t": "project_panel::ToggleFocus",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-;": "terminal_panel::ToggleFocus",
+      "ctrl-shift-;": "workspace::NewTerminal",
       // "ctrl-`": "workspace::NewTerminal",
       "ctrl-/": "workspace::ToggleBottomDock",
       // "ctrl-n": "editor::DuplicateLineDown",
@@ -486,6 +487,8 @@
     "use_layout_keys": true,
     "bindings": {
       "c": "vim::CurrentLine",
+      "(": "vim::FirstNonWhitespace",
+      ")": "vim::EndOfLine",
       "d": "editor::Rename", // zed specific
       "s": ["vim::PushOperator", { "ChangeSurrounds": {} }]
     }
@@ -496,6 +499,8 @@
     "use_layout_keys": true,
     "bindings": {
       "d": "vim::CurrentLine",
+      "(": "vim::FirstNonWhitespace",
+      ")": "vim::EndOfLine",
       "s": ["vim::PushOperator", "DeleteSurrounds"],
       "o": "editor::ToggleHunkDiff", // "d o"
       "p": "editor::RevertSelectedHunks" // "d p"
@@ -545,6 +550,8 @@
     "use_layout_keys": true,
     "bindings": {
       "y": "vim::CurrentLine",
+      "(": "vim::FirstNonWhitespace",
+      ")": "vim::EndOfLine",
       "s": ["vim::PushOperator", { "AddSurrounds": {} }]
     }
   },
@@ -797,8 +804,9 @@
     "context": "Terminal",
     "use_layout_keys": true,
     "bindings": {
-      "escape": "terminal::ToggleViMode",
+      // "escape": "terminal::ToggleViMode",
       "ctrl-;": "terminal_panel::ToggleFocus",
+      "ctrl-shift-;": "workspace::NewTerminal",
       "ctrl-/": "workspace::ToggleBottomDock",
       "ctrl-w": "pane::CloseActiveItem"
     }
