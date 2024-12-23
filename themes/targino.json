@@ -7,7 +7,7 @@
       "name": "Targino",
       "appearance": "dark",
       "style": {
-        "border": "#2e232e",
+        "border": "#3f303f",
         "border.variant": "#2e232e",
         "border.focused": "#46383d",
         "border.selected": "#352b2f",
@@ -15,7 +15,7 @@
         "border.disabled": "#2e1e2c",
         "elevated_surface.background": "#191319",
         "surface.background": "#121112",
-        "background": "#121112",
+        "background": "#191319",
         "element.background": "#221a22",
         "element.hover": "#372435",
         "element.active": "#291C28",
