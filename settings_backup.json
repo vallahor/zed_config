@@ -18,19 +18,18 @@
 // https://colordesigner.io/gradient-generator
 
 {
-  "icon_theme": "Catppuccin Latte",
   "features": {
     "copilot": false,
-    "edit_prediction_provider": "none"
+    "inline_completion_provider": "none"
   },
 
-  "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
+  // "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
 
-  "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
@@ -51,14 +50,6 @@
   "buffer_line_height": {
     // "custom": 1.7
     "custom": 1.8
-    // "custom": 2
-  },
-
-  "diagnostics": {
-    "include_warnings": true,
-    "inline": {
-      "enabled": true
-    }
   },
 
   // "ui_font_family": "JetBrains Mono",
@@ -160,15 +151,15 @@
   "git": {
     "git_gutter": "hide",
     "inline_blame": {
-      "enabled": true
+      "enabled": false
     }
   },
 
   "inlay_hints": {
-    "enabled": true
-    // "show_type_hints": false,
-    // "show_parameter_hints": false,
-    // "show_other_hints": false
+    "enabled": false,
+    "show_type_hints": false,
+    "show_parameter_hints": false,
+    "show_other_hints": false
   },
 
   "languages": {
