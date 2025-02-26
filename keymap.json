@@ -256,7 +256,7 @@
       // "p": "vim::Paste",
       // "shift-p": ["vim::Paste", { "before": true }],
       "p": ["vim::Paste", { "preserve_clipboard": true }],
-      "shift-p": ["vim::Paste", { "preserve_clipboard": true }],
+      "shift-p": ["vim::Paste", { "preserve_clipboard": true, "before": true }],
       "u": "vim::Undo",
       "ctrl-r": "vim::Redo",
       "r": "vim::PushReplace",
