@@ -1,10 +1,10 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-  "name": "Targino",
+  "name": "Targino Theme",
   "author": "Vallahor",
   "themes": [
     {
-      "name": "Targino",
+      "name": "Targino Dark Theme",
       "appearance": "dark",
       "style": {
         // "border": "#3f303f",
@@ -75,7 +75,8 @@
         "editor.active_wrap_guide": "#3a353a",
         "editor.document_highlight.read_background": "#312531",
         "editor.document_highlight.write_background": "#312531",
-        "editor.document_highlight.bracket_background": "#3a2b3a",
+        // "editor.document_highlight.bracket_background": "#3a2b3a",
+        "editor.document_highlight.bracket_background": "#00000000",
         "editor.indent_guide": "#3c2e3c",
         "editor.indent_guide_active": "#695769",
         "terminal.background": "#121112",
@@ -122,8 +123,8 @@
         "hidden": "#64626e",
         "hidden.background": "#1c1c20",
         "hidden.border": "#64626e",
-        "hint": "#968190",
-        "hint.background": "#211b1f",
+        "hint": "#676467",
+        "hint.background": "#202021",
         "hint.border": "#968190",
         "ignored": "#64626e",
         "ignored.background": "#212125",
@@ -153,7 +154,9 @@
           {
             "cursor": "#A98D92",
             "background": "#121112",
-            "selection": "#471A37"
+            // "selection": "#471A37"
+            "selection": "#471A375d"
+            // "selection": "#471A373d"
           }
         ],
         "syntax": {

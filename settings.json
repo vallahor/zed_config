@@ -18,13 +18,16 @@
 // https://colordesigner.io/gradient-generator
 
 {
+  "auto_update_extensions": {
+    "odin": false
+  },
   "icon_theme": "Catppuccin Latte",
   "features": {
     "copilot": false,
     "edit_prediction_provider": "none"
   },
 
-  "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
+  "show_completion_documentation": false,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -42,17 +45,20 @@
 
   "buffer_font_family": "JetBrains Mono",
   // "buffer_font_family": "Fira Code",
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 16.0,
+  // "buffer_font_size": 15.0,
   "buffer_font_weight": 200,
   "buffer_font_features": {
+    // "calt": false,
     "liga": true
   },
 
-  "buffer_line_height": {
-    // "custom": 1.7
-    "custom": 1.8
-    // "custom": 2
-  },
+  "buffer_line_height": "standard",
+  // "buffer_line_height": {
+  //   // "custom": 1.7
+  //   "custom": 1.8
+  //   // "custom": 2
+  // },
 
   "diagnostics": {
     "include_warnings": true,
@@ -61,11 +67,11 @@
     }
   },
 
-  // "ui_font_family": "JetBrains Mono",
-  // "ui_font_weight": 200,
-  "ui_font_family": "Inter",
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_weight": 200,
+  // "ui_font_family": "Inter",
+  // "ui_font_weight": 300,
   "ui_font_size": 16,
-  "ui_font_weight": 300,
   "ui_font_features": {
     "calt": false
   },
@@ -83,6 +89,10 @@
 
   "format_on_save": "on",
 
+  "jsx_tag_auto_close": {
+    "enabled": true
+  },
+
   "indent_guides": {
     "enabled": true
   },
@@ -98,7 +108,7 @@
   "cursor_blink": false,
   // "cursor_shape": "block",
   "cursor_shape": "bar",
-  "theme": "Targino",
+  "theme": "Targino Dark Theme",
   "preview_tabs": {
     "enabled": false
   },
@@ -121,6 +131,11 @@
 
   "tabs": {
     "file_icons": true
+  },
+
+  "file_types": {
+    // "Blade": ["*.blade.php"]
+    "PHP": ["*.blade.php"]
   },
 
   "file_finder": {
@@ -160,18 +175,35 @@
   "git": {
     "git_gutter": "hide",
     "inline_blame": {
-      "enabled": true
+      "enabled": false
     }
   },
 
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
+    "show_background": true,
     // "show_type_hints": false,
     // "show_parameter_hints": false,
     // "show_other_hints": false
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "shift": false,
+      "alt": false,
+      "platform": false,
+      "function": false
+    }
   },
 
   "languages": {
+    // "Blade": {
+    //   "formatter": {
+    //     "external": {
+    //       "command": "blade-formatter",
+    //       "command": "C:\\Users\\Vallahor\\AppData\\Roaming\\npm\\blade-formatter.cmd",
+    //       // "arguments": ["{buffer_path}"]
+    //     }
+    //   }
+    // },
     "Elixir": {
       "language_servers": [
         "elixir-ls",
@@ -292,7 +324,8 @@
     "vue-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/vue-language-server.exe",
-        "arguments": ["--stdio"]
+        "arguments": ["--stdio"],
+        "ignore_system_version": true
       }
     },
 
@@ -319,6 +352,16 @@
         "python.analysis": {
           "diagnosticMode": "workspace",
           "typeCheckingMode": "off"
+        }
+      }
+    },
+
+    "vtsls": {
+      "settings": {
+        "vtsls": {
+          "experimental": {
+            "maxInlayHintLength": 15
+          }
         }
       }
     },
