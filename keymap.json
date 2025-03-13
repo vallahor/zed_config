@@ -3,6 +3,7 @@
     "context": "VimControl && !menu",
     // "use_layout_keys": true,
     "bindings": {
+      "ctrl-g": "git_panel::ToggleFocus",
       "ctrl-u": "editor::UndoSelection",
       "ctrl-shift-u": "editor::RedoSelection",
       "ctrl-h": ["editor::SelectPrevious", { "replace_newest": false }],
@@ -713,6 +714,7 @@
     "context": "ProjectPanel && not_editing",
     // "use_layout_keys": true,
     "bindings": {
+      "ctrl-g": "git_panel::ToggleFocus",
       ":": "command_palette::Toggle",
       "a": "project_panel::NewFile",
       "/": "project_panel::NewSearchInDirectory",
@@ -829,6 +831,78 @@
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-,": "pane::ActivatePreviousItem",
       "ctrl-.": "pane::ActivateNextItem"
+    }
+  },
+
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "up": "menu::SelectPrevious",
+      "down": "menu::SelectNext",
+      "enter": "menu::Confirm",
+      "alt-y": "git::StageFile",
+      "alt-shift-y": "git::UnstageFile",
+      "ctrl-alt-y": "git::ToggleStaged",
+      "space": "git::ToggleStaged",
+      "tab": "git_panel::FocusEditor",
+      "shift-tab": "git_panel::FocusEditor",
+      "escape": "git_panel::ToggleFocus",
+      "ctrl-enter": "git::Commit",
+      "alt-enter": "menu::SecondaryConfirm",
+      "backspace": "git::RestoreFile"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "escape": "menu::Cancel",
+      "enter": "editor::Newline",
+      "ctrl-enter": "git::Commit",
+      "alt-l": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-t": "project_panel::ToggleFocus",
+      "right": "workspace::ActivatePaneRight",
+      "ctrl-g": "git_panel::ToggleFocus",
+      "shift-f": "git::Fetch",
+      "shift-p": "git::Push",
+      "ctrl-shift-p": "git::ForcePush",
+      "ctrl-p": "git::Pull",
+      "ctrl-d": "git::Diff",
+      "ctrl-backspace": "git::RestoreTrackedFiles",
+      "ctrl-shift-backspace": "git::TrashUntrackedFiles",
+      "ctrl-a": "git::StageAll",
+      "ctrl-shift-a": "git::UnstageAll"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "ctrl-enter": "git::Commit",
+      "ctrl-space": "git::StageAll",
+      "ctrl-shift-space": "git::UnstageAll"
+    }
+  },
+  {
+    "context": "AskPass > Editor",
+    "bindings": {
+      "enter": "menu::Confirm"
+    }
+  },
+  {
+    "context": "GitPanel > Editor",
+    "bindings": {
+      "escape": "git_panel::FocusChanges",
+      "tab": "git_panel::FocusChanges",
+      "shift-tab": "git_panel::FocusChanges",
+      "enter": "editor::Newline",
+      "ctrl-enter": "git::Commit",
+      "alt-up": "git_panel::FocusChanges",
+      "alt-l": "git::GenerateCommitMessage"
     }
   }
 ]
