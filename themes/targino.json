@@ -57,7 +57,9 @@
         "panel.indent_guide_active": "#695769",
         "panel.indent_guide_hover": "#645364",
         "pane.focused_border": "#715569",
-        "scrollbar.thumb.background": "#221a22f0",
+        "scrollbar.thumb.background": "#362a36f0",
+        // "scrollbar.thumb.background": "#2b212bf0",
+        // "scrollbar.thumb.background": "#221a22f0",
         "scrollbar.thumb.hover_background": "#d16d8a",
         "scrollbar.thumb.border": "#00000000",
         "scrollbar.track.background": "#00000000",
@@ -75,8 +77,8 @@
         "editor.active_wrap_guide": "#3a353a",
         "editor.document_highlight.read_background": "#312531",
         "editor.document_highlight.write_background": "#312531",
-        // "editor.document_highlight.bracket_background": "#3a2b3a",
-        "editor.document_highlight.bracket_background": "#00000000",
+        "editor.document_highlight.bracket_background": "#3a2b3a",
+        // "editor.document_highlight.bracket_background": "#00000000",
         "editor.indent_guide": "#3c2e3c",
         "editor.indent_guide_active": "#695769",
         "terminal.background": "#121112",
@@ -123,8 +125,12 @@
         "hidden": "#64626e",
         "hidden.background": "#1c1c20",
         "hidden.border": "#64626e",
-        "hint": "#676467",
-        "hint.background": "#202021",
+        "hint": "#413e41",
+        // "hint": "#676467",
+        // "hint.background": "#202021",
+        "hint.background": "#171617",
+        // "hint.background": "#151315",
+        // "hint.background": "#181518",
         "hint.border": "#968190",
         "ignored": "#64626e",
         "ignored.background": "#212125",
@@ -159,8 +165,8 @@
           {
             "cursor": "#A98D92",
             "background": "#121112",
-            // "selection": "#471A37"
-            "selection": "#471A375d"
+            "selection": "#471A37"
+            // "selection": "#471A375d"
             // "selection": "#471A373d"
           }
         ],

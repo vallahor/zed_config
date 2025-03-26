@@ -18,26 +18,30 @@
 // https://colordesigner.io/gradient-generator
 
 {
-  "auto_update_extensions": {
-    "odin": false
-  },
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "JetBrains Icons Dark",
+
   "features": {
     "copilot": false,
     "edit_prediction_provider": "none"
   },
 
-  "show_completion_documentation": false,
+  "edit_predictions": {
+    "enabled_in_assistant": false
+  },
+
+  "show_completion_documentation": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
 
-  "vim_mode": true,
+  // "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 400
+    // "default_mode": "helix_normal"
   },
 
   "show_completions_on_input": true,
@@ -122,7 +126,6 @@
     }
   },
 
-  "files_icons": true,
   "restore_on_startup": "last_session",
   "show_whitespaces": "none",
   "tab_bar": {
@@ -131,11 +134,6 @@
 
   "tabs": {
     "file_icons": true
-  },
-
-  "file_types": {
-    // "Blade": ["*.blade.php"]
-    "PHP": ["*.blade.php"]
   },
 
   "file_finder": {
@@ -166,6 +164,7 @@
     "**/report",
     "**/node_modules"
   ],
+
   "gutter": {
     "runnables": false,
     "folds": false,
@@ -173,15 +172,15 @@
   },
 
   "git": {
-    "git_gutter": "hide",
+    "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false
+      "enabled": true
     }
   },
 
   "inlay_hints": {
     "enabled": true,
-    "show_background": true,
+    "show_background": false,
     // "show_type_hints": false,
     // "show_parameter_hints": false,
     // "show_other_hints": false
@@ -195,15 +194,14 @@
   },
 
   "languages": {
-    // "Blade": {
-    //   "formatter": {
-    //     "external": {
-    //       "command": "blade-formatter",
-    //       "command": "C:\\Users\\Vallahor\\AppData\\Roaming\\npm\\blade-formatter.cmd",
-    //       // "arguments": ["{buffer_path}"]
-    //     }
-    //   }
-    // },
+    "GDScript": {
+      "format_on_save": {
+        "external": {
+          "command": "gdformat",
+          "arguments": ["-"]
+        }
+      }
+    },
     "Elixir": {
       "language_servers": [
         "elixir-ls",
@@ -232,29 +230,15 @@
     // "format_on_save": "off"
     // },
     //
-    "PHP": {
-      "format_on_save": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
 
-      "formatter": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
-
-      "language_servers": ["intelephense", "!phpactor", "..."]
-    },
     "TypeScript": {
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     },
     "TSX": {
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     }
   },
