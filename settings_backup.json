@@ -18,22 +18,30 @@
 // https://colordesigner.io/gradient-generator
 
 {
+  "icon_theme": "JetBrains Icons Dark",
+
   "features": {
     "copilot": false,
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
 
-  // "show_completion_documentation": true, // buggy. resizes a lot and sometimes reset to the first element
+  "edit_predictions": {
+    "enabled_in_assistant": false
+  },
+
+  "show_completion_documentation": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
 
-  "vim_mode": false,
+  "vim_mode": true,
+  // "vim_mode": false,
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 400
+    // "default_mode": "helix_normal"
   },
 
   "show_completions_on_input": true,
@@ -42,21 +50,32 @@
   "buffer_font_family": "JetBrains Mono",
   // "buffer_font_family": "Fira Code",
   "buffer_font_size": 15.0,
+  // "buffer_font_size": 15.0,
   "buffer_font_weight": 200,
   "buffer_font_features": {
-    "liga": true
+    // "calt": false,
+    // "liga": true
   },
 
-  "buffer_line_height": {
-    // "custom": 1.7
-    "custom": 1.8
+  "buffer_line_height": "standard",
+  // "buffer_line_height": {
+  //   // "custom": 1.7
+  //   "custom": 1.8
+  //   // "custom": 2
+  // },
+
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
   },
 
-  // "ui_font_family": "JetBrains Mono",
-  // "ui_font_weight": 200,
-  "ui_font_family": "Inter",
-  "ui_font_size": 16,
-  "ui_font_weight": 300,
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_weight": 200,
+  // "ui_font_family": "Inter",
+  // "ui_font_weight": 300,
+  "ui_font_size": 15,
   "ui_font_features": {
     "calt": false
   },
@@ -74,6 +93,10 @@
 
   "format_on_save": "on",
 
+  "jsx_tag_auto_close": {
+    "enabled": true
+  },
+
   "indent_guides": {
     "enabled": true
   },
@@ -89,7 +112,7 @@
   "cursor_blink": false,
   // "cursor_shape": "block",
   "cursor_shape": "bar",
-  "theme": "Targino",
+  "theme": "Targino Dark Theme",
   "preview_tabs": {
     "enabled": false
   },
@@ -103,7 +126,6 @@
     }
   },
 
-  "files_icons": true,
   "restore_on_startup": "last_session",
   "show_whitespaces": "none",
   "tab_bar": {
@@ -142,27 +164,75 @@
     "**/report",
     "**/node_modules"
   ],
+
   "gutter": {
-    "runnables": false,
+    "runnables": true,
     "folds": false,
-    "code_actions": false
+    "code_actions": false,
+    "breakpoints": false,
+    "line_numbers": true
   },
 
   "git": {
-    "git_gutter": "hide",
+    "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false
+      "enabled": true
     }
   },
 
   "inlay_hints": {
     "enabled": false,
-    "show_type_hints": false,
-    "show_parameter_hints": false,
-    "show_other_hints": false
+    "show_background": false,
+    // "show_type_hints": false,
+    // "show_parameter_hints": false,
+    // "show_other_hints": false
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "shift": false,
+      "alt": false,
+      "platform": false,
+      "function": false
+    }
   },
 
   "languages": {
+    "PHP": {
+      "format_on_save": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "formatter": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "language_servers": ["intelephense", "!phpactor", "..."]
+    },
+    "Zig": {
+      // Formatting with ZLS matches `zig fmt`.
+      // The Zig FAQ answers some questions about `zig fmt`:
+      // https://github.com/ziglang/zig/wiki/FAQ
+      "format_on_save": "language_server",
+      // Make sure that zls is the primary language server
+      "language_servers": ["zls", "..."],
+      "code_actions_on_format": {
+        // Run code actions that currently supports adding and removing discards.
+        "source.fixAll": true,
+        // Run code actions that sorts @import declarations.
+        "source.organizeImports": true
+      }
+    },
+    "GDScript": {
+      "format_on_save": {
+        "external": {
+          "command": "gdformat",
+          "arguments": ["-"]
+        }
+      }
+    },
     "Elixir": {
       "language_servers": [
         "elixir-ls",
@@ -191,29 +261,15 @@
     // "format_on_save": "off"
     // },
     //
-    "PHP": {
-      "format_on_save": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
 
-      "formatter": {
-        "language_server": {
-          "name": "intelephense"
-        }
-      },
-
-      "language_servers": ["intelephense", "!phpactor", "..."]
-    },
     "TypeScript": {
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     },
     "TSX": {
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     }
   },
@@ -283,7 +339,8 @@
     "vue-language-server": {
       "binary": {
         "path": "C:/Users/Vallahor/.bun/bin/vue-language-server.exe",
-        "arguments": ["--stdio"]
+        "arguments": ["--stdio"],
+        "ignore_system_version": true
       }
     },
 
@@ -310,6 +367,16 @@
         "python.analysis": {
           "diagnosticMode": "workspace",
           "typeCheckingMode": "off"
+        }
+      }
+    },
+
+    "vtsls": {
+      "settings": {
+        "vtsls": {
+          "experimental": {
+            "maxInlayHintLength": 15
+          }
         }
       }
     },

@@ -26,7 +26,7 @@
   },
 
   "edit_predictions": {
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
 
   "show_completion_documentation": true,
@@ -35,8 +35,8 @@
     "metrics": false
   },
 
-  // "vim_mode": true,
-  "vim_mode": false,
+  "vim_mode": true,
+  // "vim_mode": false,
   "vim": {
     "use_multiline_find": true,
     "use_smartcase_find": true,
@@ -49,12 +49,12 @@
 
   "buffer_font_family": "JetBrains Mono",
   // "buffer_font_family": "Fira Code",
-  "buffer_font_size": 16.0,
+  "buffer_font_size": 15.0,
   // "buffer_font_size": 15.0,
   "buffer_font_weight": 200,
   "buffer_font_features": {
     // "calt": false,
-    "liga": true
+    // "liga": true
   },
 
   "buffer_line_height": "standard",
@@ -75,7 +75,7 @@
   "ui_font_weight": 200,
   // "ui_font_family": "Inter",
   // "ui_font_weight": 300,
-  "ui_font_size": 16,
+  "ui_font_size": 15,
   "ui_font_features": {
     "calt": false
   },
@@ -166,9 +166,11 @@
   ],
 
   "gutter": {
-    "runnables": false,
+    "runnables": true,
     "folds": false,
-    "code_actions": false
+    "code_actions": false,
+    "breakpoints": false,
+    "line_numbers": true
   },
 
   "git": {
@@ -179,7 +181,7 @@
   },
 
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_background": false,
     // "show_type_hints": false,
     // "show_parameter_hints": false,
@@ -194,6 +196,35 @@
   },
 
   "languages": {
+    "PHP": {
+      "format_on_save": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "formatter": {
+        "language_server": {
+          "name": "intelephense"
+        }
+      },
+
+      "language_servers": ["intelephense", "!phpactor", "..."]
+    },
+    "Zig": {
+      // Formatting with ZLS matches `zig fmt`.
+      // The Zig FAQ answers some questions about `zig fmt`:
+      // https://github.com/ziglang/zig/wiki/FAQ
+      "format_on_save": "language_server",
+      // Make sure that zls is the primary language server
+      "language_servers": ["zls", "..."],
+      "code_actions_on_format": {
+        // Run code actions that currently supports adding and removing discards.
+        "source.fixAll": true,
+        // Run code actions that sorts @import declarations.
+        "source.organizeImports": true
+      }
+    },
     "GDScript": {
       "format_on_save": {
         "external": {
